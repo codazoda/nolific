@@ -18,12 +18,6 @@ The back-end of this is currently a very poorly written PHP application. I wrote
 
 The front-end uses htmx (but there's also a little bit of old JS code in there too). Just like the back-end, I added a bit of code before I settled on htmx. This is also my first time using htmx.
 
-## X as in Experiments
-
-Naming software experiments is a barrier to entry for me. Typically, I need to come up with a name before I can even create a project. Using numbers removes that burden and lets me start with a readme or a bit of code. This is the first of those numbered experiments.
-
-Because their numbered, I can more easily decide on ports and domain names to run them on. For example, for development work, I'll run experiments on port 8000-8999. Since this is experiment number one, I'll run it on port 8001.
-
 ## Alternate Database Filename
 
 By default the database filename is `pages.sqlite`. If you want to use a different filename you can set the environment variable `X1_FILE` to the name of the DB to use.
