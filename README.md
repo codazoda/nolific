@@ -6,7 +6,7 @@ A very simple web based note solution that's designed to serve as my second brai
 
 ## Starting Server
 
-To start using this tool simply clone the repo and then run PHP in server mode (for development and testing only) from the repo's root directory.
+To start the tool simply clone the repo and then run PHP in server mode (for development and testing only) from the repo's root directory.
 
 `php -S 0:8001`
 
@@ -33,3 +33,7 @@ By default the database filename is `pages.sqlite`. If you want to use a differe
 Because PHP's built-in development server doesn't read environment variables by default, you need to pass a new `variablers_order` value to PHP. Here's the launch command to use if you're not using the default filename.
 
 `php -d variables_order=EGPCS -S 0:8001`
+
+## License
+
+This software is experimental. Although I'm using it as-is, you might not want to. It's extremely early in it's life. I haven't spent enough time deciding how I might license the finished product.  Although I'm making the source code public on github, all rights are reserved.
