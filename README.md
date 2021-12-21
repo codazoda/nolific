@@ -2,7 +2,7 @@
 
 A very simple web based note solution that's designed to serve as my second brain.
 
-![X1 Screenshot](media/x1-screenshot.png)
+![X1 Screenshot](media/x1.gif)
 
 ## Starting Server
 
