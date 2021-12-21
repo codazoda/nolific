@@ -6,7 +6,7 @@ A very simple web based note solution that's designed to serve as my second brai
 
 ## Starting Server
 
-To start this experiment, for development work, simply run PHP in server mode.
+To start using this tool simply run PHP in server mode (for development and testing only).
 
 `php -S 0:8001`
 
