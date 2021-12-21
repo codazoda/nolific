@@ -5,9 +5,13 @@ class PagesDB extends SQLite3
 {
     function __construct()
     {
-        $this->open('pages.sqlite');
+        // Read the file specified in the environment or the default file
+        $dbFile = $_ENV['X1_FILE'] ?? 'pages.sqlite';
+        // Open the database file
+        $this->open($dbFile);
     }
 }
+// Instantiate a copy of the DB
 $db = new PagesDB();
 
 // Split the URI into pieces

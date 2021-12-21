@@ -19,3 +19,11 @@ Because their numbered, I can more easily decide on ports and domain names to ru
 To start this experiment, for development work, simply run PHP in server mode.
 
 `php -S 0:8001`
+
+By default the database filename is `pages.sqlite`. If you want to use a different filename you can set the environment variable `X1_FILE` to the name of the DB to use.
+
+`SET X1_FILE=example.sqlite`
+
+Because PHP's built-in development server doesn't read environment variables by default, you need to pass a new `variablers_order` value to PHP. Here's the launch command to use if you're not using the default filename.
+
+`php -d variables_order=EGPCS -S 0:8001`
