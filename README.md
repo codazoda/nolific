@@ -6,9 +6,11 @@ A very simple web based note solution that's designed to serve as my second brai
 
 ## Starting Server
 
-To start using this tool simply run PHP in server mode (for development and testing only).
+To start using this tool simply clone the repo and then run PHP in server mode (for development and testing only) from the repo's root directory.
 
 `php -S 0:8001`
+
+Then open your web browser and point it to `https://localhost:8001`.
 
 ## More Information
 
