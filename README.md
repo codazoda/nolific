@@ -24,15 +24,9 @@ Naming software experiments is a barrier to entry for me. Typically, I need to c
 
 Because their numbered, I can more easily decide on ports and domain names to run them on. For example, for development work, I'll run experiments on port 8000-8999. Since this is experiment number one, I'll run it on port 8001.
 
-## Alternate Database Filename
+## Running Automatically on Mac
 
-By default the database filename is `pages.sqlite`. If you want to use a different filename you can set the environment variable `X1_FILE` to the name of the DB to use.
-
-`SET X1_FILE=example.sqlite`
-
-Because PHP's built-in development server doesn't read environment variables by default, you need to pass a new `variablers_order` value to PHP. Here's the launch command to use if you're not using the default filename.
-
-`php -d variables_order=EGPCS -S 0:8001`
+I've created a `com.joeldare.x1.plist` file that starts the system automatically on localhost. I symlink this file from `~/Library/LaunchAgents` and the Mac OS launchd system will launch it automatically and keep it running.
 
 ## License
 

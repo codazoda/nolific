@@ -5,8 +5,12 @@ class PagesDB extends SQLite3
 {
     function __construct()
     {
-        // Read the file specified in the environment or the default file
-        $dbFile = $_ENV['X1_FILE'] ?? 'pages.sqlite';
+        // Open my personal file if it exists (this keeps my data out of the repo)
+        if (file_exists('joeldare.sqlite')) {
+            $dbFile = 'joeldare.sqlite';
+        } else {
+            $dbFile = 'pages.sqlite';
+        }
         // Open the database file
         $this->open($dbFile);
     }
