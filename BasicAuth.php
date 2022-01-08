@@ -7,10 +7,6 @@ class BasicAuth {
 
     public function __construct($passwordFile)
     {
-        $this->config = [
-            "port" => "8003",
-            "path" => "./www"
-        ];
         $this->users = parse_ini_file($passwordFile);
     }
 
