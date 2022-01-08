@@ -1,5 +1,14 @@
 <?php
 
+require 'BasicAuth.php';
+
+// Instantiate the class for HTTP Basic Authentication
+$basic = new BasicAuth('../users.ini');
+// Make every request require authorization
+if (!$basic->auth()) {
+    die;
+}
+
 // Open the sqlite db
 class PagesDB extends SQLite3
 {
@@ -16,7 +25,7 @@ class PagesDB extends SQLite3
     }
 }
 // Instantiate a copy of the DB
-$db = new PagesDB();
+$db = new PagesDB;
 
 // Split the URI into pieces
 $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
