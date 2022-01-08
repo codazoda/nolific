@@ -10,28 +10,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="/manifest.json">
 
     <!-- External CSS -->
-	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="/main.css">
 
     <!-- Icons -->
-    <link rel="icon" type="image/png" sizes="64x64" href="media/pen-nib-solid.png">
-    <link rel="icon" type="image/png" sizes="128x128" href="media/pen-nib-solid-128.png">
-	<link rel="shortcut icon" type="image/png" href="media/pen-nib-solid.png">
-	<link rel="apple-touch-icon" href="media/pen-nib-solid-128-white.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/media/pen-nib-solid.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="/media/pen-nib-solid-128.png">
+	<link rel="shortcut icon" type="image/png" href="/media/pen-nib-solid.png">
+	<link rel="apple-touch-icon" href="/media/pen-nib-solid-128-white.png">
 
 </head>
 
 <body>
 
-    <p id="title"> <?php echo "$title ($id)"; ?> <a href="?page=<?php echo $prev; ?>">&lt;</a> <a href="?page=<?php echo $next; ?>">&gt;</a> <a href="?page=new">+</a></p>
+    <p id="title"> <?php echo "$title ($id)"; ?> <a href="/page/<?php echo $prev; ?>">&lt;</a> <a href="/page/<?php echo $next; ?>">&gt;</a> <a href="/new">+</a></p>
     <input type="hidden" name="page" value="<?php echo $id; ?>">
 	<textarea id="typebox" name="text" hx-post="/save" hx-trigger="keyup changed delay:500ms" hx-include="[name='page']"><?php echo $text; ?></textarea>
 	
 	<!-- External Javascript -->
-	<script src="edit.js"></script>
-    <script src="vendor/htmx.min.js"></script>
+	<script src="/edit.js"></script>
+    <script src="/vendor/htmx.min.js"></script>
 
 </body>
 
