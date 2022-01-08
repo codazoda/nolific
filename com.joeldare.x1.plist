@@ -4,13 +4,11 @@
 <dict>
 	<key>Label</key>
 	<string>com.joeldare.x1</string>
-	<key>LimitLoadToSessionType</key>
-	<string>Aqua</string>
     <key>WorkingDirectory</key>
     <string>/Users/jdare/Dropbox/Joel/sandbox/x1</string>
 	<key>ProgramArguments</key>
 	<array>
-		<string>php</string>
+		<string>/usr/local/opt/php@7.4/bin/php</string>
 		<string>-S</string>
 		<string>0:8001</string>
 	</array>
