@@ -14,6 +14,7 @@
 
     <!-- External CSS -->
 	<link rel="stylesheet" type="text/css" href="/main.css">
+    <link rel="stylesheet" type="text/css" href="/vendor/material-ui/material-ui.css">
 
     <!-- Icons -->
     <link rel="icon" type="image/png" sizes="64x64" href="/media/pen-nib-solid.png">
@@ -25,7 +26,12 @@
 
 <body>
 
-    <p id="title"> <?php echo "$title ($id)"; ?> <a href="/page/<?php echo $prev; ?>">&lt;</a> <a href="/page/<?php echo $next; ?>">&gt;</a> <a href="/new">+</a></p>
+    <p id="title">
+        <?php echo "$title ($id)"; ?>
+        <a href="/page/<?php echo $prev; ?>"><span class="material-icons">navigate_before</span></a>
+        <a href="/page/<?php echo $next; ?>"><span class="material-icons">navigate_next</span></a>
+        <a href="/new"><span class="material-icons">add</span></a>
+    </p>
     <input type="hidden" name="page" value="<?php echo $id; ?>">
 	<textarea id="typebox" name="text" hx-post="/save" hx-trigger="keyup changed delay:500ms" hx-include="[name='page']"><?php echo $text; ?></textarea>
 	

@@ -36,9 +36,26 @@ button {
     border: 1px solid #444;
 }
 #title {
+    display: inline;
+    font-size: 18px;
+    display: block;
     margin: 0;
     color: silver;
-    text-align: right; 
+    text-align: right;
+    height: 24px;
+}
+#title a {
+    color: #444;
+}
+/* Hack to align icons in most browsers */
+.material-icons {
+    vertical-align: -7px;
+}
+/* Hack to align firefox icons */
+@-moz-document url-prefix(){
+    .material-icons {
+        vertical-align: -5px;
+    }
 }
 /* desktop screens */
 @media only screen and (min-width: 800px) {
