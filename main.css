@@ -35,6 +35,36 @@ button {
     color: #444;
     border: 1px solid #444;
 }
+hr {
+    height: 1px;
+    border: 0;
+    border-top: 1px solid silver;
+}
+/* The Menu */
+#menu {
+    position: fixed; 
+    right: 20px; 
+    background-color: #eee; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: none;
+}
+#menu ul {
+    list-style-type: none; 
+    margin: 15px 0 15px 0; 
+    padding: 0;
+}
+#menu li {
+    color: #444;
+    padding: 5px 20px 5px 20px;
+}
+#menu li a {
+    text-decoration: none;
+    color: #444;
+}
+#menu li:hover {
+    background-color: silver;
+}
+/* The Title Line */
 #title {
     display: inline;
     font-size: 18px;
@@ -45,6 +75,9 @@ button {
     height: 24px;
 }
 #title a {
+    color: #444;
+}
+#title span {
     color: #444;
 }
 /* Hack to align icons in most browsers */

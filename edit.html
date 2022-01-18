@@ -28,10 +28,19 @@
 
     <p id="title">
         <?php echo "$title ($id)"; ?>
-        <a href="/page/<?php echo $prev; ?>"><span class="material-icons">navigate_before</span></a>
-        <a href="/page/<?php echo $next; ?>"><span class="material-icons">navigate_next</span></a>
-        <a href="/new"><span class="material-icons">add</span></a>
+        <span class="material-icons" title="Actions">north_east</span>
+        <a href="/page/<?php echo $prev; ?>"><span class="material-icons" title="Previous Page">navigate_before</span></a>
+        <a href="/page/<?php echo $next; ?>"><span class="material-icons" title="Next Page">navigate_next</span></a>
+        <a href="/new"><span class="material-icons" title="Add New Page">add</span></a>
     </p>
+    <div id="menu">
+        <ul>
+            <li>Example Action</li>
+            <li>Example Action</li>
+            <hr>
+            <li><a href="/">Edit Actions</a></li>
+        </ul>
+    </div>
     <input type="hidden" name="page" value="<?php echo $id; ?>">
 	<textarea id="typebox" name="text" hx-post="/save" hx-trigger="keyup changed delay:500ms" hx-include="[name='page']"><?php echo $text; ?></textarea>
 	

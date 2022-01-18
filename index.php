@@ -8,7 +8,6 @@ class App {
     private $config = [
         'userFile' => '../users.ini'
     ];
-
     public $db;
     public $last = 0; // The last page ID
 
@@ -46,15 +45,12 @@ class App {
         switch($uriSegments[1]) {
             case 'save':
                 $this->handleSave($_POST['page'], $_POST['text']);
-                die; // TODO: Remove this when fall through is okay
                 break;
             case 'page':
                 $this->handlePage($uriSegments[2]);
-                die; // TODO: Remove this when fall through is okay
                 break;
             case 'new':
                 $this->handleNew();
-                die; // TODO: Remove this when fall through is okay
                 break;
             default:
                 $this->handlePage($this->last);
@@ -112,6 +108,15 @@ class App {
         $result = $statement->execute();
         // Redirect back to the main page which automatically switches to the newest page
         header("Location: /");
+    }
+
+    private function handleComponent($component) {
+        switch($component) {
+            case 'menu':
+                include 'components/menu.html';
+                break;
+            default:
+        }
     }
 
     /**
