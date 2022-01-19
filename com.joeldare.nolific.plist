@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>Label</key>
-	<string>com.joeldare.x1</string>
+	<string>com.joeldare.nolific</string>
     <key>WorkingDirectory</key>
-    <string>/Users/jdare/Dropbox/Joel/sandbox/x1</string>
+    <string>/Users/jdare/Dropbox/Joel/sandbox/nolific</string>
 	<key>ProgramArguments</key>
 	<array>
 		<string>/usr/local/opt/php@7.4/bin/php</string>
