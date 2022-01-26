@@ -53,7 +53,7 @@ class App {
                 $this->handleNew();
                 break;
             default:
-                $this->handlePage($this->last);
+                $this->handlePage($this->last['id']);
         }
     }
 
@@ -86,10 +86,10 @@ class App {
         $next = $page['id'] + 1;
         // Template variable to wrap the prev page to the last page if we're already at the first page
         if ($prev < 1) {
-            $prev = $this->last;
+            $prev = $this->last['id'];
         }
         // Template variable to wrap the next page to the first page if we're already at the last page
-        if ($next > $this->last) {
+        if ($next > $this->last['id']) {
             $next = 1;
         }
         // Pull in the editor UI
@@ -100,12 +100,15 @@ class App {
      * Handle a request for a new page to be added
      */
     private function handleNew() {
-        // Format todays date so we can write it into the DB
-        $now = date('Y-m-d');
-        // Query to insert a new blank page with todays created date
-        $statement = $this->db->prepare('INSERT INTO `pages` (`title`, `text`, `created`) VALUES ("Untitled", "", :now)');
-        $statement->bindValue(':now', $now, SQLITE3_TEXT);
-        $result = $statement->execute();
+        // If the last page is not blank, create a new blank page
+        if ($this->last['text'] != '') {        
+            // Format todays date so we can write it into the DB
+            $now = date('Y-m-d');
+            // Query to insert a new blank page with todays created date
+            $statement = $this->db->prepare('INSERT INTO `pages` (`title`, `text`, `created`) VALUES ("Untitled", "", :now)');
+            $statement->bindValue(':now', $now, SQLITE3_TEXT);
+            $result = $statement->execute();
+        }
         // Redirect back to the main page which automatically switches to the newest page
         header("Location: /");
     }
@@ -120,15 +123,16 @@ class App {
     }
 
     /**
-     * Fetch the last page (highest page id) from the database and return it.
+     * Fetch the last page (highest page id) from the database and return an array
+     * containing the id and text body.
      */
-    private function lastPage(): int {
+    private function lastPage(): array {
         // Query for the newest document id
-        $statement = $this->db->prepare('SELECT `id`, `title`, `text` FROM `pages` ORDER BY `id` DESC LIMIT 1');
+        $statement = $this->db->prepare('SELECT `id`, `text` FROM `pages` ORDER BY `id` DESC LIMIT 1');
         $result = $statement->execute();
         $page = $result->fetchArray(SQLITE3_ASSOC);
         // Grab the last page ID so we know how to wrap navigation
-        return $page['id'];
+        return $page;
     }
 }
 
