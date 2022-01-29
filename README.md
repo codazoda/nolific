@@ -1,4 +1,4 @@
-# X1
+# Nolific (X1)
 
 A very simple web based note solution that's designed to serve as my second brain.
 
@@ -19,6 +19,8 @@ The back-end of this is currently a very poorly written PHP application. I wrote
 The front-end uses htmx (but there's also a little bit of old JS code in there too). Just like the back-end, I added a bit of code before I settled on htmx. This is also my first time using htmx.
 
 ## X as in Experiments
+
+This tool was originally called X1 and I've now renamed it to Nolific.
 
 Naming software experiments is a barrier to entry for me. Typically, I need to come up with a name before I can even create a project. Using numbers removes that burden and lets me start with a readme or a bit of code. This is the first of those numbered experiments.
 
