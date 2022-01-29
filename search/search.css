@@ -1,0 +1,7 @@
+body {
+    margin-top: 20px;
+}
+
+input[name="search"] {
+    width: 50%;
+}

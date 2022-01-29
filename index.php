@@ -41,16 +41,22 @@ class App {
     private function route() {
         // Split the URI into pieces
         $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
-        // Route dthe request
+        // Route the request
         switch($uriSegments[1]) {
-            case 'save':
-                $this->handleSave($_POST['page'], $_POST['text']);
-                break;
             case 'page':
                 $this->handlePage($uriSegments[2]);
                 break;
+            case 'search':
+                $this->handleSearch();
+                break;
+            case 'save':
+                $this->handleSave($_POST['page'], $_POST['text']);
+                break;
             case 'new':
                 $this->handleNew();
+                break;
+            case 'find':
+                $this->handleFind($_GET['search']);
                 break;
             default:
                 $this->handlePage($this->last['id']);
@@ -111,6 +117,28 @@ class App {
         }
         // Redirect back to the main page which automatically switches to the newest page
         header("Location: /");
+    }
+
+    /**
+     * Handle a request for the search page
+     */
+    private function handleSearch() {
+        // Pull in the search UI
+        require 'search.html';
+    }
+
+    /**
+     * Handle a request to find search results
+     */
+    private function handleFind($search) {
+        // Query for matching documents
+        $statement = $this->db->prepare('SELECT `id`, `title`, SUBSTR(`text`, 1, 80) AS `fragment` FROM `pages` WHERE `text` LIKE :search ORDER BY `id` DESC');
+        $statement->bindValue(':search', "%{$search}%", SQLITE3_TEXT);
+        $result = $statement->execute();
+        // Loop through the results
+        while ($page = $result->fetchArray(SQLITE3_ASSOC)) {
+            echo "<p><a href=\"/page/{$page['id']}\">{$page['title']}</strong> ({$page['id']})</a><br>{$page['fragment']}</p>";
+        }
     }
 
     private function handleComponent($component) {

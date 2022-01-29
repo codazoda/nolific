@@ -80,6 +80,9 @@ hr {
 #title span {
     color: #444;
 }
+.material-icons {
+    cursor: pointer;
+}
 /* Hack to align icons in most browsers */
 .material-icons {
     vertical-align: -7px;

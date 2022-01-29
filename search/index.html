@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>Nolific - Search</title>
+
+    <meta charset="UTF-8">
+
+    <!-- Mobile Magic -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- External CSS -->
+	<link rel="stylesheet" type="text/css" href="/main.css">
+    <link rel="stylesheet" type="text/css" href="/search/search.css">
+    <link rel="stylesheet" type="text/css" href="/vendor/material-ui/material-ui.css">
+
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="64x64" href="/media/pen-nib-solid.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="/media/pen-nib-solid-128.png">
+	<link rel="shortcut icon" type="image/png" href="/media/pen-nib-solid.png">
+	<link rel="apple-touch-icon" href="/media/pen-nib-solid-128-white.png">
+
+</head>
+
+<body>
+
+    <input type="text" name="search" placeholder="Enter your search..." hx-get="/find" hx-target="#results" autofocus>
+    
+    <div id="results">
+    </div>
+
+	<!-- External Javascript -->
+    <script src="/vendor/htmx.min.js"></script>
+
+</body>
+
+</html>
