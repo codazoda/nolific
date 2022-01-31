@@ -34,6 +34,8 @@ Because their numbered, I can more easily decide on ports and domain names to ru
 
 I've created a `com.joeldare.nolific.plist` file that starts the system automatically on localhost. I symlink this file from `~/Library/LaunchAgents` and the Mac OS launchd system will launch it automatically and keep it running.
 
-## Font Awesome
+## Acknowledgments
 
-I've included Font Awesome x.x to use as the navigation.
+Nolific uses [HTMX](https://htmx.org/) which is distributed under the BSD 2-Clause License.
+
+Nolific uses [Material UI icons](https://developers.google.com/fonts/docs/material_icons) from Google which are distributed under the Apache License Version 2.0.
