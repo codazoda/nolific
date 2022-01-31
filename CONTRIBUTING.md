@@ -1,5 +1,7 @@
 # Contributing
 
+These are personal notes for my own maintenance of this project. Eventually I'll add notes for outside contributers.
+
 ## Tagging
 
 ```
