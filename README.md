@@ -4,11 +4,15 @@ A very simple web based note solution that's designed to serve as my second brai
 
 ![X1 Screenshot](media/x1.gif)
 
-## Starting Server
+## Getting Started
 
 To start the tool simply clone the repo and then run PHP in server mode (for development and testing only) from the repo's root directory.
 
-`php -S 0:8001`
+```
+git clone git@github.com:codazoda/nolific.git
+cd nolific
+php -S 0:8001
+```
 
 Then open your web browser and point it to `https://localhost:8001`.
 
