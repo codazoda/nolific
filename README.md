@@ -34,6 +34,29 @@ Because their numbered, I can more easily decide on ports and domain names to ru
 
 I've created a `com.joeldare.nolific.plist` file that starts the system automatically on localhost. I symlink this file from `~/Library/LaunchAgents` and the Mac OS launchd system will launch it automatically and keep it running.
 
+## Release Notes
+
+**v0.0.2**
+
+The second public release. Still very much experimental but coming together with a really useful feature set.
+
+- Update the project name from X1 to Nolific
+- Add username/password authentication
+- Add a search feature
+- Add Material UI icons to make the UI nicer
+- Update the new page button to create a new page only if a blank page doesn't already exist
+- Update the license from proprietary to AGPLv3
+- Add a plist file to start the app automatically on Mac
+- Add a FAQ explaining the license rationale
+- Add a contributing doc to note personal maintenance commands
+- Add acknowledgments for third party tools that are used by the project
+- Initial nolific.com page
+- Add Action menu (does nothing right now)
+
+**v0.0.1**
+
+First public release, which was posted on Show HN.
+
 ## Acknowledgments
 
 Nolific uses [HTMX](https://htmx.org/) which is distributed under the BSD 2-Clause License.
