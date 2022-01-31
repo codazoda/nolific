@@ -18,7 +18,7 @@ Then open your web browser and point it to `http://localhost:8001`. The default 
 
 ## Requirements
 
-Nolific uses PHP with SQLite3.
+Nolific uses PHP with SQLite3. I'm using PHP 7.4.23 at the time of this writing.
 
 Most Mac's have this installed by default. How you install it on other systems will depend on the system. On a Debian based system you might use something like the following command.
 
@@ -68,6 +68,10 @@ The second public release. Still very much experimental but coming together with
 First public release, which was posted on Show HN.
 
 ## Acknowledgments
+
+Nolific is currently written in [PHP](https://php.net) which is licensed under their own BSD-style license certified by the OSI.
+
+Nolific uses SQLite3 as a database backend to store your notes. SQLite3 is in the public domain.
 
 Nolific uses [HTMX](https://htmx.org/) which is distributed under the BSD 2-Clause License.
 
