@@ -2,7 +2,7 @@
 
 A very simple web based note solution that's designed to serve as my second brain.
 
-![X1 Screenshot](media/nolific.gif)
+![Nolific Screenshot](media/nolific.png)
 
 ## Getting Started
 
