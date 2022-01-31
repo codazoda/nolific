@@ -16,6 +16,16 @@ php -S 0:8001
 
 Then open your web browser and point it to `http://localhost:8001`.
 
+## Requirements
+
+Nolific uses PHP with SQLite3.
+
+Most Mac's have this installed by default. How you install it on other systems will depend on the system. On a Debian based system you might use something like the following command.
+
+```
+apt-get install php7.4 php7.4-sqlite3
+```
+
 ## More Information
 
 The back-end of this is currently a very poorly written PHP application. I wrote part of the application before I figured out how I wanted to organize it. Still, it's a really simple application and I plan to clean it up later. In the long term I'm thinking I may re-write it in GO once I get a feel for how it works for me. PHP is the language I use professionally and have for many years, so it currently serves as my hammer.
