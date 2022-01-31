@@ -9,9 +9,9 @@ A very simple web based note solution that's designed to serve as my second brai
 To start the tool simply clone the repo and then run PHP in server mode (for development and testing only) from the repo's root directory.
 
 ```
-git clone git@github.com:codazoda/nolific.git
+git clone https://github.com/codazoda/nolific.git
 cd nolific
-php -S 0:8001
+php -S localhost:8001
 ```
 
 Then open your web browser and point it to `http://localhost:8001`. The default username is `admin` and the default password is also `admin`.
