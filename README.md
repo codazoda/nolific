@@ -34,10 +34,6 @@ Because their numbered, I can more easily decide on ports and domain names to ru
 
 I've created a `com.joeldare.x1.plist` file that starts the system automatically on localhost. I symlink this file from `~/Library/LaunchAgents` and the Mac OS launchd system will launch it automatically and keep it running.
 
-## License
-
-This software is experimental. Although I'm using it as-is, you might not want to. It's extremely early in it's life. I haven't spent enough time deciding how I might license the finished product.  Although I'm making the source code public on github, all rights are reserved.
-
 ## Font Awesome
 
 I've included Font Awesome x.x to use as the navigation.
