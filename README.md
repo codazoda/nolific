@@ -14,7 +14,7 @@ cd nolific
 php -S 0:8001
 ```
 
-Then open your web browser and point it to `https://localhost:8001`.
+Then open your web browser and point it to `http://localhost:8001`.
 
 ## More Information
 
