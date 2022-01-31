@@ -32,7 +32,7 @@ Because their numbered, I can more easily decide on ports and domain names to ru
 
 ## Running Automatically on Mac
 
-I've created a `com.joeldare.x1.plist` file that starts the system automatically on localhost. I symlink this file from `~/Library/LaunchAgents` and the Mac OS launchd system will launch it automatically and keep it running.
+I've created a `com.joeldare.nolific.plist` file that starts the system automatically on localhost. I symlink this file from `~/Library/LaunchAgents` and the Mac OS launchd system will launch it automatically and keep it running.
 
 ## Font Awesome
 
