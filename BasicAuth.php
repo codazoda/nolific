@@ -7,7 +7,15 @@ class BasicAuth {
 
     public function __construct($passwordFile)
     {
-        $this->users = parse_ini_file($passwordFile);
+        // If the password file exists, use it
+        if (file_exists($passwordFile)) {
+            $this->users = parse_ini_file($passwordFile);
+        } else {
+            // Use admin:admin if there is no password file
+            $this->users = [
+                "admin" => "$2y$10$25JAucKk7DHulMJvBPTEcusQ4IV6G0/8YhKyaXbhFAxjJOBjCv.6e"
+            ];
+        }
     }
 
     // Authenticate the user
