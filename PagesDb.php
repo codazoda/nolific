@@ -5,11 +5,17 @@ class PagesDb extends SQLite3
 {
     function __construct()
     {
-        // Open my personal file if it exists (this keeps my data out of the repo)
-        if (file_exists('joeldare.sqlite')) {
-            $dbFile = 'joeldare.sqlite';
-        } else {
-            $dbFile = 'pages.sqlite';
+        // Check if a data directory exists
+        if(!is_dir('data')){
+            // Create it
+            mkdir('data', 0755);
+        }
+        // Set the DB filename to user.sqlite in the data directory
+        $dbFile = 'data/' . $_SERVER['PHP_AUTH_USER'] . '.sqlite';
+        // Check if the database file exists
+        if (!file_exists($dbFile)) {
+            // Copy an empty database over for this user
+            copy('pages.sqlite', 'data/' . $_SERVER['PHP_AUTH_USER'] . '.sqlite');
         }
         // Open the database file
         $this->open($dbFile);

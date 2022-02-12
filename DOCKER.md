@@ -1,6 +1,8 @@
 # Docker Instructions
 
-These are some instructions on building Nolific into a Docker container. Note that this doesn't work yet because the sqlite data is in the app directory and for Docker containers we need to move that to a volume.
+These are some instructions on building Nolific into a Docker container.
+
+Nolific will store it's sqlite databases in the `data/` directory. This directory is excluded from the repo and Nolific will create it and copy a default file there if it doesn't exist. For the container we'll mount this directory to the home directory on the host (`~/Nolific`) so that we can persist the database.
 
 ## Build the Docker image
 
@@ -12,7 +14,7 @@ These are some instructions on building Nolific into a Docker container. Note th
 docker run \
     --hostname nolific \
     --publish "8001:8001" \
-    --volume "" \
+    --volume ~/Nolific:/var/www/data \
     --name nolific \
     --detach \
     nolific \

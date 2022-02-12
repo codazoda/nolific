@@ -13,7 +13,8 @@ COPY / /var/www/
 
 # Install php
 RUN apk update && \
-    apk add php
+    apk add php && \
+    apk add php-sqlite3
 
 # Ports we want in the container
 EXPOSE 8001
