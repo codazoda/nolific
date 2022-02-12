@@ -68,8 +68,19 @@ class App {
      */
     private function handleSave($pageId, $pageText) {
         $now = date('Y-m-d');
-        $statement = $this->db->prepare('UPDATE `pages` SET `text` = :text, `edited` = :now WHERE `id` = :id');
+        // Grab the first 150 characters as a potential title
+        $potentialTitle = substr($pageText, 0, 150);
+        // Strip everything up to the first newline
+        $potentialTitle = strstr($potentialTitle, "\n" , true);
+        // Trim white space and #'s from the ends of the string
+        $pageTitle = trim($potentialTitle, "# \n\r\t\v\x00");
+        // If the title is empty, set it to Untitled
+        if (empty($pageTitle)) {
+            $pageTitle = "Untitled";
+        }
+        $statement = $this->db->prepare('UPDATE `pages` SET `text` = :text, `title` = :title, `edited` = :now WHERE `id` = :id');
         $statement->bindValue(':text', $pageText, SQLITE3_TEXT);
+        $statement->bindValue(':title', $pageTitle, SQLITE3_TEXT);
         $statement->bindValue(':now', $now, SQLITE3_TEXT);
         $statement->bindValue(':id', $pageId, SQLITE3_INTEGER);
         $result = $statement->execute();
