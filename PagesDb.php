@@ -19,5 +19,10 @@ class PagesDb extends SQLite3
         }
         // Open the database file
         $this->open($dbFile);
+        // Make a couple backups
+        $dayOfWeek = date('l');
+        $yearAndMonth = date('Y-F');
+        copy($dbFile, "data/{$_SERVER['PHP_AUTH_USER']}-{$dayOfWeek}.sqlite");
+        copy($dbFile, "data/{$_SERVER['PHP_AUTH_USER']}-{$yearAndMonth}.sqlite");
     }
 }
