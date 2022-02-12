@@ -17,12 +17,12 @@ class PagesDb extends SQLite3
             // Copy an empty database over for this user
             copy('pages.sqlite', 'data/' . $_SERVER['PHP_AUTH_USER'] . '.sqlite');
         }
-        // Open the database file
-        $this->open($dbFile);
         // Make a couple backups
         $dayOfWeek = date('l');
         $yearAndMonth = date('Y-F');
         copy($dbFile, "data/{$_SERVER['PHP_AUTH_USER']}-{$dayOfWeek}.sqlite");
         copy($dbFile, "data/{$_SERVER['PHP_AUTH_USER']}-{$yearAndMonth}.sqlite");
+        // Open the database file
+        $this->open($dbFile);
     }
 }
