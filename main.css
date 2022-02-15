@@ -73,12 +73,24 @@ hr {
     color: silver;
     text-align: right;
     height: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+#title p {
+    margin: 0 0;
 }
 #title a {
     color: #444;
 }
-#title span {
+#title .material-icons {
     color: #444;
+}
+#title #page {
+    float: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 50%; /* Hack */
+    margin-right: 10px;
 }
 .material-icons {
     cursor: pointer;
