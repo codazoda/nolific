@@ -26,14 +26,16 @@
 
 <body>
 
-    <p id="title">
-        <?php echo "$title ($id)"; ?>
-        <a href="/search"><span class="material-icons" title="Search">search</span></a>
-        <!-- <span class="material-icons" title="Actions">north_east</span> -->
-        <a href="/page/<?php echo $prev; ?>"><span class="material-icons" title="Previous Page">navigate_before</span></a>
-        <a href="/page/<?php echo $next; ?>"><span class="material-icons" title="Next Page">navigate_next</span></a>
-        <a href="/new"><span class="material-icons" title="Add New Page">add</span></a>
-    </p>
+    <div id="title">
+        <p id="nav" style="float: right;">
+            <a href="/search"><span class="material-icons" title="Search">search</span></a>
+            <!-- <span class="material-icons" title="Actions">north_east</span> -->
+            <a href="/page/<?php echo $prev; ?>"><span class="material-icons" title="Previous Page">navigate_before</span></a>
+            <a href="/page/<?php echo $next; ?>"><span class="material-icons" title="Next Page">navigate_next</span></a>
+            <a href="/new"><span class="material-icons" title="Add New Page">add</span></a>
+        </p>
+        <p id="page" style=""><?php echo "$title ($id)"; ?></p>
+    </div>
     <div id="menu">
         <ul>
             <li>Example Action</li>
