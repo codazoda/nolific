@@ -30,6 +30,7 @@ class App {
         } else {
             $dataDir = 'data/';
         }
+        error_log("Using {$dataDir}/user.ini file");
         // Instantiate the class for HTTP Basic Authentication
         $basic = new BasicAuth($dataDir . 'users.ini');
         // Make every request require authorization
