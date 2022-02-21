@@ -16,4 +16,4 @@ ENV NOLIFIC_DATA /data
 EXPOSE 8001
 
 # Run the php dev server (cheating)
-CMD /usr/bin/php -S 0:8001 -t /var/www/
+CMD /usr/bin/php -d variables_order=EGPCS -S 0:8001 -t /var/www/
