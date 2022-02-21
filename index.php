@@ -5,9 +5,6 @@ require 'PagesDb.php';
 
 class App {
 
-    private $config = [
-        'userFile' => '../users.ini'
-    ];
     public $db;
     public $last = 0; // The last page ID
 
@@ -27,8 +24,14 @@ class App {
      * Authenticate a request using the BasicAuth class
      */
     private function authenticate() {
+        // If there's an environment variable set use it as the data path
+        if (!empty(getenv('NOLIFIC_DATA'))) {
+            $dataDir = getenv('NOLIFIC_DATA');
+        } else {
+            $dataDir = 'data/';
+        }
         // Instantiate the class for HTTP Basic Authentication
-        $basic = new BasicAuth($this->config['userFile']);
+        $basic = new BasicAuth($dataDir . 'users.ini');
         // Make every request require authorization
         if (!$basic->auth()) {
             die;

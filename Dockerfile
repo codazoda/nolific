@@ -1,10 +1,3 @@
-# Note: This doesn't work yet.
-#
-# TODO
-# ----
-# - Add a volume to the Dockerfile (for data)
-# - Update the code to have data somewhere else
-
 # Use the alpine base image (small)
 FROM alpine:latest
 
@@ -15,6 +8,9 @@ COPY / /var/www/
 RUN apk update && \
     apk add php && \
     apk add php-sqlite3
+
+# Environment variables we want in the container
+ENV NOLIFIC_DATA /data
 
 # Ports we want in the container
 EXPOSE 8001
