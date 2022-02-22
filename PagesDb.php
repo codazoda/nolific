@@ -14,14 +14,14 @@ class PagesDb extends SQLite3
         if (!empty(getenv('NOLIFIC_DATA'))) {
             $dataDir = getenv('NOLIFIC_DATA');
         } else {
-            $dataDir = 'data/';
+            $dataDir = 'data';
         }
         // Set the DB filename to user.sqlite in the data directory
-        $dbFile = $dataDir . $_SERVER['PHP_AUTH_USER'] . '.sqlite';
+        $dbFile = $dataDir . '/' . $_SERVER['PHP_AUTH_USER'] . '.sqlite';
         // Check if the database file exists
         if (!file_exists($dbFile)) {
             // Copy an empty database over for this user
-            copy('pages.sqlite', $dataDir . $_SERVER['PHP_AUTH_USER'] . '.sqlite');
+            copy('pages.sqlite', $dataDir . '/' . $_SERVER['PHP_AUTH_USER'] . '.sqlite');
         }
         // Make a couple backups
         $dayOfWeek = date('l');
