@@ -7,12 +7,13 @@ This is a todo list for Nolific.
 - ~Fix long names wrapping bug~ [02/15/2022]
 - Fix over-writing documents that have updated (somehow)
   - Possibly via diff
-- Add whitespace to navigation (mostly for mobile)
+- Add whitespace to navigation (mostly for mobile) [addHeaderSpace - xx/xx/xxxx]
+- Fix tab key (insert tab or 4 spaces)
+- Add backup button to download the sqlite file
 - Key bindings
   - Cmd-S / Ctrl-S (ignored if possible)
   - Cmd-F / Ctrl-F (find link)
   - Next / Previous
-- Fix tab key (insert tab or 4 spaces)
 - Add a new user feature
   - Redirect to new user if there are no users
 - Add a config file (-1)
@@ -24,4 +25,6 @@ This is a todo list for Nolific.
 - Add an undo history and button (save to local storage?)
 - Daily automatic backups (maybe by weekday i.e. admin-mon.sqlite)
 - Remove first line of text from search results (it's in the title)
-- If the title is empty change it to "Untitled"
+- ~If the title is empty change it to "Untitled"~
+- Add export button to export the sqlite file as md files
+- Add feature flags [addFeatureFlags]
