@@ -6,6 +6,7 @@ This is a todo list for Nolific.
 - ~~App opens a user file (i.e. admin.sqlite)~~ [02/12/2022]
 - ~Fix long names wrapping bug~ [02/15/2022]
 - Fix over-writing documents that have updated (somehow)
+  - Possibly via diff
 - Add whitespace to navigation (mostly for mobile)
 - Key bindings
   - Cmd-S / Ctrl-S (ignored if possible)
