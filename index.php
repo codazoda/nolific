@@ -28,9 +28,14 @@ class App {
         if (!empty(getenv('NOLIFIC_DATA'))) {
             $dataDir = getenv('NOLIFIC_DATA');
         } else {
-            $dataDir = 'data/';
+            $dataDir = 'data';
         }
-        error_log("Using {$dataDir}/user.ini file");
+        // If there's a trailing slash, strip it off
+        if(substr($dataDir, -1) == '/') {
+            $dataDir = substr($dataDir, 0, -1);
+        }
+        // Log the directory name we're using
+        error_log("Using {$dataDir}/ directory");
         // Instantiate the class for HTTP Basic Authentication
         $basic = new BasicAuth($dataDir . '/users.ini');
         // Make every request require authorization

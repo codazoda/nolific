@@ -26,8 +26,8 @@ class PagesDb extends SQLite3
         // Make a couple backups
         $dayOfWeek = date('l');
         $yearAndMonth = date('Y-F');
-        copy($dbFile, "{$dataDir}{$_SERVER['PHP_AUTH_USER']}-{$dayOfWeek}.sqlite");
-        copy($dbFile, "{$dataDir}{$_SERVER['PHP_AUTH_USER']}-{$yearAndMonth}.sqlite");
+        copy($dbFile, "{$dataDir}/{$_SERVER['PHP_AUTH_USER']}-{$dayOfWeek}.sqlite");
+        copy($dbFile, "{$dataDir}/{$_SERVER['PHP_AUTH_USER']}-{$yearAndMonth}.sqlite");
         // Open the database file
         $this->open($dbFile);
     }
