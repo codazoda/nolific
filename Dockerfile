@@ -13,7 +13,7 @@ RUN apk update && \
 ENV NOLIFIC_DATA /data
 
 # Ports we want in the container
-EXPOSE 8001
+EXPOSE 80
 
 # Run the php dev server (cheating)
-CMD /usr/bin/php -d variables_order=EGPCS -S 0:8001 -t /var/www/
+CMD /usr/bin/php -d variables_order=EGPCS -S 0:80 -t /var/www/
