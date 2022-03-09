@@ -6,6 +6,10 @@ This is a todo list for Nolific.
 - ~~App opens a user file (i.e. admin.sqlite)~~ [02/12/2022]
 - ~Fix long names wrapping bug~ [02/15/2022]
 - ~~Add whitespace to navigation (mostly for mobile)~~ [addHeaderSpace - 03/03/2022]
+- Deploy to nolific.com instead of locally
+- Save "created" date on save if it doesn't already exist[1]
+- Don't add "created" date when a new doc is created[1]
+- Put the title into the title tag of the page (so it shows up in the browser tab)
 - Fix over-writing documents that have updated (somehow)
   - Possibly via diff
 - Add backup button to download the sqlite file
@@ -28,3 +32,5 @@ This is a todo list for Nolific.
 - ~If the title is empty change it to "Untitled"~
 - Add export button to export the sqlite file as md files
 - Add feature flags [addFeatureFlags]
+
+1. I want documents to be marked as _created_ when they are first saved instead of when they are first added to the database. This will make the plus button add a blank entry to the DB when it's clicked, if one doesn't already exist, but it will only be marked as _created_ once the author starts to type into the file.
