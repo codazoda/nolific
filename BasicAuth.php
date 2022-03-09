@@ -25,7 +25,7 @@ class BasicAuth {
             error_log("Not empty");
             // If this user ID exists in our array
             if (array_key_exists($_SERVER['PHP_AUTH_USER'], $this->users)) {
-                error_log("ID exists");
+                error_log("User exists");
                 // Grab the hash for this user from the array
                 $storedHash = $this->users[$_SERVER['PHP_AUTH_USER']];
                 // Verify the password against the hash

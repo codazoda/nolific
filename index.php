@@ -119,7 +119,7 @@ class App {
             $next = 1;
         }
         // Pull in the editor UI
-        require 'edit.html';
+        require 'view/edit/index.html';
     }
 
     /**
@@ -144,7 +144,7 @@ class App {
      */
     private function handleSearch() {
         // Pull in the search UI
-        require 'search.html';
+        require 'view/search/index.html';
     }
 
     /**
