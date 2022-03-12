@@ -1,0 +1,13 @@
+#!php
+<?php
+
+// A util to create a user hash
+//
+// Syntax: userhash [username]
+
+require 'BasicAuth.php';
+
+$basic = new BasicAuth('../../users.ini');
+
+$user = !empty($argv[1]) ? $argv[1] : 'demo';
+echo $user . '=' . $basic->hash($user) . "\n";
