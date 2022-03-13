@@ -14,8 +14,8 @@ Nolific will store it's sqlite databases in the `data/` directory. This director
 docker run \
     --hostname nolific \
     --publish "8001:8001" \
-    --volume ~/Nolific:/data \
-    --env NOLIFIC_DATA=/data \
+    --volume ~/data:/data \
+    --env NOLIFIC_DATA=/data/nolific \
     --name nolific \
     --detach \
     nolific \

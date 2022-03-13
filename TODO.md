@@ -6,8 +6,9 @@ This is a todo list for Nolific.
 - ~~App opens a user file (i.e. admin.sqlite)~~ [02/12/2022]
 - ~Fix long names wrapping bug~ [02/15/2022]
 - ~~Add whitespace to navigation (mostly for mobile)~~ [addHeaderSpace - 03/03/2022]
-- Deploy to nolific.com instead of locally
-- Don't run docker as root
+- ~~Deploy to nolific.com instead of locally~~ [03/12/2022]
+- ~~Don't run docker as root~~ [02/11/2022]
+- Add hamburger menu for extra stuff (logout, backup, help, etc)
 - Save "created" date on save if it doesn't already exist[1]
 - Don't add "created" date when a new doc is created[1]
 - Put the title into the title tag of the page (so it shows up in the browser tab)
