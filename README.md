@@ -46,6 +46,20 @@ I've created a `com.joeldare.nolific.plist` file that starts the system automati
 
 ## Release Notes
 
+**v0.3.0**
+
+The first hosted release.
+
+- Deploy first hosted version (https://app.nolific.com)
+- Update the design for mobile
+- Add automatic daily database backups
+- Add container configuration (use optional)
+- Update the data paths and optionally set with environment variables
+- Update the auth file path
+- Add util directory and user util
+- Add acknowledgments to the README
+- Various minor bug fixes
+
 **v0.0.2**
 
 The second public release. Still very much experimental but coming together with a really useful feature set.
