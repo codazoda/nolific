@@ -35,4 +35,4 @@ This is a todo list for Nolific.
 - Add export button to export the sqlite file as md files
 - Add feature flags [addFeatureFlags]
 
-1. I want documents to be marked as _created_ when they are first saved instead of when they are first added to the database. This will make the plus button add a blank entry to the DB when it's clicked, if one doesn't already exist, but it will only be marked as _created_ once the author starts to type into the file.
+1. I want documents to be marked as _created_ when they are first saved instead of when they are first added to the database. This will make the plus button add a blank entry to the DB when it's clicked, if one doesn't already exist, but it will only be marked as _created_ once the author starts to type into the file. Need to be careful, however, because _/save_ is called very frequently and adding another query would double the query volume. So, this probably shouldn't be done in the _save_ endpoint.
