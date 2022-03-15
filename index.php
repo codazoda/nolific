@@ -83,6 +83,9 @@ class App {
         $potentialTitle = strstr($potentialTitle, "\n" , true);
         // Trim white space and #'s from the ends of the string
         $pageTitle = trim($potentialTitle, "# \n\r\t\v\x00");
+        // Strip dangerous characters from title
+        $unsafe = array('%', '.', ',', ';', ':', '<', '>', '(', ')', '=', '&', '#', '?', '*', '|', '/', '\\', '"', '\'', chr(0));
+        $pageTitle = str_replace($unsafe, ' ', $pageTitle);
         // If the title is empty, set it to Untitled
         if (empty($pageTitle)) {
             $pageTitle = "Untitled";
