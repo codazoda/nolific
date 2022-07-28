@@ -2,12 +2,16 @@
 <?php
 
 // A util to create a user hash
-//
-// Syntax: userhash [username]
 
 require 'BasicAuth.php';
 
 $basic = new BasicAuth('../../users.ini');
 
-$user = !empty($argv[1]) ? $argv[1] : 'demo';
-echo $user . '=' . $basic->hash($user) . "\n";
+// If there weren't enough arguments, show the syntax
+if (empty($argv[1]) || empty($argv[2]) ) {
+    die("Syntax: userhash [username] [password]\n");
+}
+
+$user = $argv[1];
+$pass = $argv[2];
+echo $user . '=' . $basic->hash($pass) . "\n";

@@ -1,6 +1,5 @@
 <?php
 
-require 'BasicAuth.php';
 require 'PagesDb.php';
 
 class App {
@@ -10,8 +9,6 @@ class App {
 
     public function __construct()
     {
-        // Authenticate all requests
-        $this->authenticate();
         // Instanciate the database
         $this->db = new PagesDb;
         // Grab the last page in the DB

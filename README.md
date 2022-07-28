@@ -20,7 +20,13 @@ Then open your web browser and point it to `http://localhost:8001`. The default 
 
 Nolific uses PHP with SQLite3. I'm using PHP 7.4.23 at the time of this writing.
 
-Most Macs have this installed by default. How you install it on other systems will depend on the system. On a Debian based system you might use something like the following command.
+Some Macs have this installed by default but it was removed in MacOS 12 (Monterey). You can install PHP with homebrew.
+
+```
+brew install php
+```
+
+How you install it on other systems will depend on the system. On a Debian based system you might use something like the following command.
 
 ```
 apt-get install php7.4 php7.4-sqlite3
@@ -42,7 +48,7 @@ Because they're numbered, I can more easily decide on ports and domain names to 
 
 ## Running Automatically on Mac
 
-I've created a `com.joeldare.nolific.plist` file that starts the system automatically on localhost. I symlink this file from `~/Library/LaunchAgents` and the Mac OS launchd system will launch it automatically and keep it running.
+The easiest way I've found to run it automatically on your Mac is to add it to the list of Login Items in System Preferences, Users & Groups.
 
 ## Release Notes
 
