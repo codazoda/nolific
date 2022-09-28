@@ -1,6 +1,6 @@
 # Nolific
 
-A very simple web based note solution that's designed to serve as my second brain. Try it at [https://www.nolific.com](https://www.nolific.com).
+A very simple web based note solution that's designed to serve as my second brain.
 
 ![Nolific Screenshot](media/nolific.png)
 
