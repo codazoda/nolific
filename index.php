@@ -18,7 +18,9 @@ class App {
     }
 
     /**
-     * Authenticate a request using the BasicAuth class
+     * Authenticate a request using the BasicAuth class 
+     * 
+     * DEPRECATED - I'm no longer using any authentication and instead just running this on my local network
      */
     private function authenticate() {
         // If there's an environment variable set use it as the data path
