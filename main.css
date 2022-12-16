@@ -110,4 +110,11 @@ hr {
     ul {
         max-width: 400px;
     }
-  }
+}
+
+/* printing */
+@media print {
+    #nav {
+        visibility: hidden;
+    }
+}
