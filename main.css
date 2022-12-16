@@ -117,4 +117,7 @@ hr {
     #nav {
         visibility: hidden;
     }
+    #page {
+        visibility: hidden;
+    }
 }
