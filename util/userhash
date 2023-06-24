@@ -3,7 +3,7 @@
 
 // A util to create a user hash
 
-require 'BasicAuth.php';
+require '../BasicAuth.php';
 
 $basic = new BasicAuth('../../users.ini');
 
