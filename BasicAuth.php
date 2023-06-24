@@ -5,6 +5,8 @@
  */
 class BasicAuth {
 
+    private $users;
+
     public function __construct($passwordFile)
     {
         // If the password file exists, use it
@@ -13,7 +15,7 @@ class BasicAuth {
         } else {
             // Use admin:admin if there is no password file
             $this->users = [
-                "admin" => "$2y$10$25JAucKk7DHulMJvBPTEcusQ4IV6G0/8YhKyaXbhFAxjJOBjCv.6e"
+                'admin' => '$2y$10$rEulQUCZfaIYREVwmbPDG.VV4e7MwJnW1joS8TgXEjSO9Pxjf5RPq'
             ];
         }
     }
