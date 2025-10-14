@@ -1,5 +1,7 @@
 # Nolific
 
+> 💡 Enjoy this tool? Get my weekly developer notes → [joeldare.com/subscribe](https://joeldare.com/subscribe)
+
 A very simple web based note solution that's designed to serve as my second brain.
 
 ![Nolific Screenshot](media/nolific.png)
